@@ -20,9 +20,9 @@ public class TakeScript : MonoBehaviour
             PickUp();
     }
 
-    void OnTriggerEnter2D(Colider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equal("Drovosek"))
+        if (collision.gameObject.name.Equals("Drovosek"))
         {
             pickUpAllowed = true;
         }
@@ -30,6 +30,14 @@ public class TakeScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.name.Equals("Drovosek"))
+            pickUpAllowed = false;
+
+    }
+
+    private void PickUp()
+    {
+        Destroy(gameObject);
     }
 
 }
