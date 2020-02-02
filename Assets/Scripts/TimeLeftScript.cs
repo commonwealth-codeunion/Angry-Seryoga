@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimeLeftScript : MonoBehaviour
 {
     Text text;
-    public static float timeleft = f;
+    public static float timeleft = 10f;
 
     void Start()
     {
@@ -15,10 +15,10 @@ public class TimeLeftScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         timeleft -= Time.deltaTime;
         if (timeleft < 0)
             timeleft = 0;
-        text.text = "Тоби пизда: " + Mathf.Round (timeleft);
+        text.text = "Оставшееся время: " + Mathf.Round (timeleft);
     }
 }

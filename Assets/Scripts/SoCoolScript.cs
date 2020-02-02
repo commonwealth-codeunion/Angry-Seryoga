@@ -18,6 +18,8 @@ public class SoCoolScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Input.GetAxisRaw("Horizontal"));
+        Debug.Log(Input.GetAxisRaw("Vertical"));
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
     }

@@ -53,7 +53,7 @@ public class TakeScript : MonoBehaviour
         if (!isArmed)
         {
         gameObject.transform.parent = GameObject.FindWithTag("Player").transform;
-        gameObject.transform.localPosition = new Vector2(-0.01f,-0.05f);
+        gameObject.transform.localPosition = new Vector3(1.9f,-0.7f, -2);
         pickUpAllowed = false;
         }
     }
